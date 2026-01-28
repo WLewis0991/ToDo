@@ -27,7 +27,7 @@ header {
   flex-direction: column;
   align-items:center;
   padding: 20px;
-  border-bottom: 2px rgba(226, 225, 222, 0.572) solid;
+  border-bottom: 2px rgb(226, 225, 222) solid;
   width: 100%;
 }
 
@@ -39,7 +39,7 @@ header {
 #sideBar {
   width: 30%;
   height: 100vh;
-  background-color: rgba(226, 225, 222, 0.576);
+  background-color: rgba(214, 214, 214, 0.58);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -73,6 +73,12 @@ li {
 
 #projectsImg {
   height: 3em;
+}
+
+#addProjectButton {
+  width: 80%;
+  cursor: pointer;
+  margin-top: 30px;
 }
 
 #taskContainer {
