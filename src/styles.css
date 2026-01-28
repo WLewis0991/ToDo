@@ -69,6 +69,12 @@ ul.projectList {
 li {
   margin: 20px;
   cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+li:hover {
+  transform: scale(1.1);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.325);
 }
 
 #projectsImg {
@@ -79,6 +85,12 @@ li {
   width: 80%;
   cursor: pointer;
   margin-top: 30px;
+  transition: all 0.3s ease;
+}
+
+#addProjectButton:hover {
+  transform: scale(1.07);
+
 }
 
 #taskContainer {
@@ -96,4 +108,9 @@ li {
 #addTaskButton {
   height: 50px;
   cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#addTaskButton:hover {
+  transform: scale(1.07);
 }
