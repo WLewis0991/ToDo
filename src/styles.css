@@ -1,42 +1,57 @@
 /* styles.css */
+@font-face {
+  font-family: 'MyCustomFont'; /* A name you choose */
+  src: url('fonts/GoogleSans-VariableFont_GRAD\,opsz\,wght.ttf') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; /* Prevents render-blocking */
+}
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 body {
   background-color: rgb(255, 255, 255);
   display: flex;
-  flex-direction: column;
   margin: 0;
-  padding: 0;;
+  padding: 0;
+  font-family: "MyCustomFont", sans-serif;
 }
 
 header {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: black;
-  padding: 10px;
+  flex-direction: column;
+  align-items:center;
+  padding: 20px;
+  border-bottom: 2px rgba(226, 225, 222, 0.572) solid;
+  width: 100%;
 }
 
 #logo {
   height: 50px;
-  background-color: transparent;
+  margin-bottom: 0px;
 }
 
-#addTask {
-  height: 30px;
-}
-
-#content {
+#sideBar {
+  width: 30%;
+  height: 100vh;
+  background-color: rgba(226, 225, 222, 0.576);
   display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-#projectList {
-  min-width: 30%;
-  min-height: 100vh;
-  border-right: 1px solid #ccc;
-  padding-left: 5px;
+#projectBanner {
+  display: flex;
+  align-items: center;
+  font-size: 1em;
+  padding-top: 50px;;
 }
 
-#taskList {
-  flex-grow: 1;
-  min-height: 100vh;
-  padding-left: 20px;
+#projectsImg {
+  height: 3em;
 }
