@@ -17,14 +17,13 @@
                 <h1>Projects</h1>
             </div>
             <ul class="projectList">
-                <li>Tacos</li>
-                <li>Burritos</li>
-                <li>Soda</li>
+                 <!-- Projects will be added here through JS-->
             </ul>
             <img src="imgs/AddProjectButton.png" alt="AddProjectButton" id="addProjectButton">
             
         </div>
     </div>
+
     <div id="taskContainer">
         <div id="taskHeader">
             <h3 id="currentProjectTitle"></h3>
@@ -34,6 +33,19 @@
         <div id="taskList">
         </div>
     </div>
+
+    <dialog id="addProjectModal">
+        <form method="dialog" id="addProjectForm">
+            <h2>Add New Project</h2>
+            <label for="projectNameInput">Project Name:</label>
+            <input type="text" id="projectNameInput" name="projectNameInput" required>
+            <div class="modalButtons">
+                <button type="submit" id="submitProjectButton">Add Project</button>
+                <button type="button" id="cancelProjectButton">Cancel</button>
+            </div>
+        </form>
+
+    </dialog>
     
 </body>
 </html>
