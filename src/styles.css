@@ -93,6 +93,47 @@ li:hover {
 
 }
 
+#addProjectModal {
+  text-align: center;
+  padding: 30px;
+  margin: auto;
+  margin-top: 20%;
+  border-radius: 20px;
+  border: 1px solid rgb(181, 181, 181);
+}
+
+#addProjectModal::backdrop {
+  background-color: rgba(0, 0, 0, 0.457);
+  backdrop-filter: blur(2px);
+}
+
+#projectNameInput {
+  width: 80%;
+  height: 40px;
+  font-size: 1.2em;
+  padding: 5px;
+  margin-top: 20px;
+  border: 1px solid rgb(181, 181, 181);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.modalButtons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+#addProject, #cancelProject {
+  height: 30px;
+  cursor: pointer;
+  transition: ease all 0.5s;
+}
+
+#addProject:hover, #cancelProject:hover {
+  transform: scale(1.1);
+}
+
 #taskContainer {
   width: 100%;
   padding: 20px;
