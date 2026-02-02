@@ -180,4 +180,10 @@ li:hover {
   justify-content: space-between;
   margin-top: 10px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+#task:hover {
+  transform: scale(1.02);
 }
