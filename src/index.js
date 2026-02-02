@@ -2,7 +2,7 @@
 import "./styles.css";
 import { openProjectModal } from "./openProjectModule.js";
 import { AddNewProject } from "./addProject.js";
-import { projects } from "./storage.js";
+import { renderProjects } from "./renderProjects.js";
 
 
 const addProjectButton = document.getElementById("addProjectButton");
@@ -19,16 +19,5 @@ addProject.addEventListener("click", () => {
 
 })
 
-
-
-function renderProjects(){
-    const projectList = document.getElementById("projectList");
-    projectList.innerHTML = "";
-    projects.forEach (project => {
-    const projectItem = document.createElement("li");
-    projectItem.innerText = project.name;
-    projectList.appendChild(projectItem);
-})
-};
 
 renderProjects();
