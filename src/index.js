@@ -1,6 +1,7 @@
 // src/index.js
 import "./styles.css";
-import { openProjectModal } from "./addProject.js";
+import { openProjectModal } from "./openProjectModule.js";
+import { AddNewProject } from "./addProject.js";
 
 const addProjectButton = document.getElementById("addProjectButton");
 
@@ -8,13 +9,6 @@ addProjectButton.addEventListener("click", openProjectModal);
 
 const projects = JSON.parse(localStorage.getItem("projects")) || [];
 
-function AddNewProject (name) {
-    this.name = name;
-    this.tasks = [];
-
-    projects.push(this);
-    localStorage.setItem("projects", JSON.stringify(projects))
-}
 
 const projectNameInput = document.getElementById("projectNameInput");
 const addProject = document.getElementById("addProject");

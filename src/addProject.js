@@ -1,20 +1,9 @@
-export {openProjectModal}; 
- 
+import { projects } from "./storage.js";
 
-function openProjectModal(){   
-    const projectModal = document.getElementById("addProjectModal");
-    const addProject = document.getElementById("addProject");
-    const cancelProject = document.getElementById("cancelProject");
-    const projectNameInput = document.getElementById("projectNameInput");
+export function AddNewProject (name) {
+    this.name = name;
+    this.tasks = [];
 
-    projectModal.showModal();
-
-    addProject.addEventListener("click", () => {
-        projectModal.close();
-    })
-
-    cancelProject.addEventListener("click", () => {
-        projectNameInput.value="";
-        projectModal.close();
-    })
+    projects.push(this);
+    localStorage.setItem("projects", JSON.stringify(projects))
 }
