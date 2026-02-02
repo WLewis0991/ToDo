@@ -79,23 +79,50 @@ function addTask(taskName, taskDescription, taskDueDate, taskPriority) {
 
   project.tasks.push(newTask);
   localStorage.setItem("projects", JSON.stringify(projects));
-}
-// current project id 
-
-
-
-
-
-//render todos funciton placeholder
-
-function renderToDos () {
-    const taskList = document.getElementById("taskList");
-    currentProject = this.datasetid;
-    taskList.innerHTML = "";
-    const projectId = this.datasetid;
-    console.log(currentProject);
+  renderToDos();
 }
 
+function renderToDos() {
+  const taskList = document.getElementById("taskList");
+  const project = projects.find(p => p.id === currentProject);
+
+  if (!project) return;
+
+  taskList.innerHTML = "";
+
+  project.tasks.forEach(task => {
+    const taskDiv = document.createElement("div");
+    taskDiv.id = "task";
+
+    const taskNameDiv = document.createElement("div");
+    taskNameDiv.id = "taskName";
+    taskNameDiv.innerText = task.name;
+
+    const taskDescriptionDiv = document.createElement("div");
+    taskDescriptionDiv.id = "taskDescription";
+    taskDescriptionDiv.innerText = task.description;
+
+    const taskDueDateDiv = document.createElement("div");
+    taskDueDateDiv.id = "taskDueDate";
+    taskDueDateDiv.innerText = `Due Date: ${task.dueDate}`;
+
+    const taskPriorityDiv = document.createElement("div");
+    taskPriorityDiv.id = "taskPriority";
+    taskPriorityDiv.innerText = `Priority: ${task.priority}`;
+
+    taskDiv.append(
+      taskNameDiv,
+      taskDescriptionDiv,
+      taskDueDateDiv,
+      taskPriorityDiv
+    );
+
+    taskList.appendChild(taskDiv);
+  });
+
+  // clear inputs AFTER render
+
+}
 /* Rendering of task cards
 
     const taskDiv = document.createElement("div");
@@ -125,10 +152,5 @@ function renderToDos () {
     taskDueDateInput.value = "";
     priorityOptions.forEach(option => option.checked = false);
 
-    addTaskModal.close();
-
     */
 
-
-
-    renderToDos();
