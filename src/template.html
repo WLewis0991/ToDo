@@ -32,6 +32,19 @@
         </div>
         <div id="taskList">
             <!-- Tasks will be added here through JS -->
+             <div id="task">
+                <div id="taskName">
+                    <h4>Sample Task</h4>
+                </div>
+                <div id="taskDesription">
+                    <p>This is a sample task description.</p>
+                </div>
+                <div id="taskDueDate">
+                </div>
+                <div id="taskPriority">
+                </div>
+
+             </div>
         </div>
     </div>
 
@@ -51,10 +64,17 @@
             <input type="text" id="taskNameInput" name="taskNameInput" required placeholder="Task Name"><br>
             <textarea id="taskDescriptionInput" name="taskDescriptionInput" placeholder="Task Description"></textarea><br>
             <input type="date" id="taskDueDateInput" name="taskDueDateInput" required><br>
+             <div id="priority-selection">
+                <h3>Select Priority:</h3>
+                <label><input type="radio" name="priority" value="High" /> High</label>
+                <label><input type="radio" name="priority" value="Moderate" /> Moderate</label>
+                <label><input type="radio" name="priority" value="Low" /> Low</label>
+            </div>          
             <div class="modalButtons">
                 <img src="imgs/add.png" alt="Add Task" id="addTask" class="addButton">
                 <img src="imgs/cancel.png" alt="Cancel" id="cancelTask" class="cancelButton">
             </div>
+
         </form>
     </dialog>
     
