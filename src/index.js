@@ -14,12 +14,21 @@ const addProject = document.getElementById("addProject");
 addProject.addEventListener("click", () => {
     let newProject = projectNameInput.value;
     newProject = new AddNewProject(newProject)
+    projectNameInput.value = "";
+    renderProjects();
+
 })
 
-projects.forEach (project => {
+
+
+function renderProjects(){
     const projectList = document.getElementById("projectList");
+    projectList.innerHTML = "";
+    projects.forEach (project => {
     const projectItem = document.createElement("li");
     projectItem.innerText = project.name;
     projectList.appendChild(projectItem);
-
 })
+};
+
+renderProjects();
