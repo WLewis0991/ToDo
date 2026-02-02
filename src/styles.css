@@ -124,14 +124,23 @@ li:hover {
   margin-top: 20px;
 }
 
-#addProject, #cancelProject {
+.addButton, .cancelButton {
   height: 30px;
   cursor: pointer;
-  transition: ease all 0.5s;
+  transition: all 0.5s ease;
 }
 
-#addProject:hover, #cancelProject:hover {
+.addButton:hover, .cancelButton:hover {
   transform: scale(1.1);
+}
+
+#addTaskModal{
+  text-align: center;
+  padding: 30px;
+  margin: auto;
+  margin-top: 20%;
+  border-radius: 20px;
+  border: 1px solid rgb(181, 181, 181);
 }
 
 #taskContainer {
