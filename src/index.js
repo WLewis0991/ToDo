@@ -2,7 +2,8 @@
 import "./styles.css";
 import { openProjectModal } from "./openProjectModule.js";
 import { AddNewProject } from "./addProject.js";
-import { renderProjects } from "./renderProjects.js";
+import { renderProjects, currentProject } from "./renderProjects.js";
+import { projects } from "./storage.js";
 
 
 const addProjectButton = document.getElementById("addProjectButton");
@@ -52,6 +53,50 @@ addNewTask.addEventListener("click", () => {
             break;
         }   
     }
+    addTask(taskName, taskDescription, taskDueDate, taskPriority)
+
+    addTaskModal.close();
+
+})
+
+
+
+function addTask(taskName, taskDescription, taskDueDate, taskPriority) {
+  const newTask = {
+    id: crypto.randomUUID(),
+    name: taskName,
+    description: taskDescription,
+    dueDate: taskDueDate,
+    priority: taskPriority
+  };
+
+  const project = projects.find(p => p.id === currentProject);
+
+  if (!project) {
+    console.error("No project selected");
+    return;
+  }
+
+  project.tasks.push(newTask);
+  localStorage.setItem("projects", JSON.stringify(projects));
+}
+// current project id 
+
+
+
+
+
+//render todos funciton placeholder
+
+function renderToDos () {
+    const taskList = document.getElementById("taskList");
+    currentProject = this.datasetid;
+    taskList.innerHTML = "";
+    const projectId = this.datasetid;
+    console.log(currentProject);
+}
+
+/* Rendering of task cards
 
     const taskDiv = document.createElement("div");
     taskDiv.id = "task";
@@ -82,4 +127,8 @@ addNewTask.addEventListener("click", () => {
 
     addTaskModal.close();
 
-})
+    */
+
+
+
+    renderToDos();

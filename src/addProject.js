@@ -8,3 +8,4 @@ export function AddNewProject (name) {
     projects.push(this);
     localStorage.setItem("projects", JSON.stringify(projects))
 }
+
