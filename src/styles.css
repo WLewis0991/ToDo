@@ -135,12 +135,14 @@ li:hover {
 }
 
 #addTaskModal{
+  
   text-align: center;
   padding: 30px;
   margin: auto;
   margin-top: 20%;
   border-radius: 20px;
   border: 1px solid rgb(181, 181, 181);
+
 }
 
 #taskContainer {

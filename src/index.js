@@ -19,5 +19,19 @@ addProject.addEventListener("click", () => {
 
 })
 
-
 renderProjects();
+
+
+//Opening task modal
+
+const addTaskModal = document.getElementById("addTaskModal");
+const addTaskButton = document.getElementById("addTaskButton");
+const cancelTask = document.getElementById("cancelTask");
+
+addTaskButton.addEventListener("click", () => {
+    addTaskModal.showModal();
+})
+
+cancelTask.addEventListener("click", () => {
+    addTaskModal.close();
+})
