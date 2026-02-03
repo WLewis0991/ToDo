@@ -4,7 +4,7 @@ import { openProjectModal } from "./openProjectModule.js";
 import { AddNewProject } from "./addProject.js";
 import { renderProjects} from "./renderProjects.js";
 import { addTask } from "./addTask.js";
-
+import { projects } from "./storage.js";
 
 
 
@@ -62,6 +62,8 @@ addNewTask.addEventListener("click", () => {
     addTaskModal.close();
 
 });
+
+
 
 renderProjects();
 

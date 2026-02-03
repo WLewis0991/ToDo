@@ -203,3 +203,16 @@ li:hover {
   cursor: pointer;
   transition: all 0.3s ease;
 }
+
+#taskNameInput {
+  height: 2em;
+  margin: 10px;
+  text-align: center;
+}
+
+#taskDescriptionInput {
+  width:300px;
+  height: 200px;
+  font-family: "MyCustomFont", sans-serif;;
+
+}
