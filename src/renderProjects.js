@@ -14,6 +14,8 @@ function renderProjects() {
 
     projectItem.addEventListener("click", renderToDos);
     projectList.appendChild(projectItem);
+
+
   });
 }
 
@@ -30,6 +32,11 @@ function renderToDos(e) {
   const project = projects.find(p => p.id === currentProject);
 
   if (!project) return;
+
+  const currentProjectTitle = document.getElementById("currentProjectTitle")
+
+  currentProjectTitle.innerText = "";
+  currentProjectTitle.innerText = `Current Project: ${project.name}`;
 
   taskList.innerHTML = "";
 
