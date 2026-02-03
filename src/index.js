@@ -2,8 +2,8 @@
 import "./styles.css";
 import { openProjectModal } from "./openProjectModule.js";
 import { AddNewProject } from "./addProject.js";
-import { renderProjects, renderToDos, currentProject  } from "./renderProjects.js";
-import { projects } from "./storage.js";
+import { renderProjects} from "./renderProjects.js";
+import { addTask } from "./addTask.js";
 
 
 
@@ -64,26 +64,4 @@ addNewTask.addEventListener("click", () => {
 })
 
 
-// Adding a task
-
-function addTask(taskName, taskDescription, taskDueDate, taskPriority) {
-  const newTask = {
-    id: crypto.randomUUID(),
-    name: taskName,
-    description: taskDescription,
-    dueDate: taskDueDate,
-    priority: taskPriority
-  };
-
-  const project = projects.find(p => p.id === currentProject);
-
-  if (!project) {
-    console.error("No project selected");
-    return;
-  }
-
-  project.tasks.push(newTask);
-  localStorage.setItem("projects", JSON.stringify(projects));
-  renderToDos();
-}
 

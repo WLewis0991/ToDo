@@ -9,7 +9,7 @@ function renderProjects() {
   projects.forEach(project => {
     const projectItem = document.createElement("li");
 
-    projectItem.dataset.id = project.id; // ✅ FIX
+    projectItem.dataset.id = project.id; 
     projectItem.innerText = project.name;
 
     projectItem.addEventListener("click", renderToDos);
