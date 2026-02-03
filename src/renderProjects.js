@@ -1,6 +1,6 @@
 import { projects } from "./storage.js";
 
-export { renderProjects, currentProject, renderToDos};
+export { renderProjects, currentProject };;
 
 function renderProjects(){
     const projectList = document.getElementById("projectList");
@@ -15,7 +15,6 @@ function renderProjects(){
 };
 
 let currentProject = null;
-
 
 function renderToDos() {
     currentProject = this.datasetid;
@@ -54,8 +53,6 @@ function renderToDos() {
     );
 
     taskList.appendChild(taskDiv);
-  });
+})};
 
-  // clear inputs AFTER render
-
-}
+  // clear inputs AFTER rendering
