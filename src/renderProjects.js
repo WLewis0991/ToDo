@@ -29,7 +29,7 @@ function renderToDos() {
     const taskDiv = document.createElement("div");
     taskDiv.id = "task";
 
-    const taskNameDiv = document.createElement("div");
+    const taskNameDiv = document.createElement("h3");
     taskNameDiv.id = "taskName";
     taskNameDiv.innerText = task.name;
 
@@ -45,6 +45,8 @@ function renderToDos() {
     taskPriorityDiv.id = "taskPriority";
     taskPriorityDiv.innerText = `Priority: ${task.priority}`;
 
+
+
     taskDiv.append(
       taskNameDiv,
       taskDescriptionDiv,
@@ -53,6 +55,8 @@ function renderToDos() {
     );
 
     taskList.appendChild(taskDiv);
+
 })};
+
 
   // clear inputs AFTER rendering

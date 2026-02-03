@@ -145,6 +145,12 @@ li:hover {
 
 }
 
+
+#addTaskModal::backdrop {
+  background-color: rgba(0, 0, 0, 0.457);
+  backdrop-filter: blur(2px);
+}
+
 #taskContainer {
   width: 100%;
   padding: 20px;

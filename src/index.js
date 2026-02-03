@@ -21,6 +21,7 @@ addProject.addEventListener("click", () => {
 
 })
 
+
 renderProjects();
 
 
@@ -38,7 +39,7 @@ cancelTask.addEventListener("click", () => {
     addTaskModal.close();
 })
 
-// task display test
+// Adding a new task 
 const tasklist = document.getElementById("taskList");
 const addNewTask = document.getElementById("addTask");
 
@@ -61,6 +62,7 @@ addNewTask.addEventListener("click", () => {
 })
 
 
+// Adding a task
 
 function addTask(taskName, taskDescription, taskDueDate, taskPriority) {
   const newTask = {
@@ -83,6 +85,7 @@ function addTask(taskName, taskDescription, taskDueDate, taskPriority) {
   renderToDos();
 }
 
+// Rendering ToDos for the current project
 function renderToDos() {
   const taskList = document.getElementById("taskList");
   const project = projects.find(p => p.id === currentProject);
@@ -95,7 +98,7 @@ function renderToDos() {
     const taskDiv = document.createElement("div");
     taskDiv.id = "task";
 
-    const taskNameDiv = document.createElement("div");
+    const taskNameDiv = document.createElement("h5");
     taskNameDiv.id = "taskName";
     taskNameDiv.innerText = task.name;
 
@@ -132,3 +135,4 @@ function renderToDos() {
 
     taskList.appendChild(taskDiv);
   })};
+
