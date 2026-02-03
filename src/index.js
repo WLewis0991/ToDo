@@ -24,7 +24,7 @@ addProject.addEventListener("click", () => {
 })
 
 
-renderProjects();
+
 
 
 //Opening task modal
@@ -61,7 +61,10 @@ addNewTask.addEventListener("click", () => {
 
     addTaskModal.close();
 
-})
+});
+
+renderProjects();
+
 
 
 
