@@ -6,6 +6,7 @@ import { renderProjects, currentProject } from "./renderProjects.js";
 import { projects } from "./storage.js";
 
 
+
 const addProjectButton = document.getElementById("addProjectButton");
 
 addProjectButton.addEventListener("click", openProjectModal);
@@ -110,47 +111,24 @@ function renderToDos() {
     taskPriorityDiv.id = "taskPriority";
     taskPriorityDiv.innerText = `Priority: ${task.priority}`;
 
+    const deleteTaskButton = document.createElement("button");
+    deleteTaskButton.id = "deleteTaskButton";
+    deleteTaskButton.innerText = "X";
+    deleteTaskButton.addEventListener("click", () => {
+      project.tasks = project.tasks.filter(t => t.id !== task.id);
+      localStorage.setItem("projects", JSON.stringify(projects));
+      renderToDos();
+    });
+
+    
+
     taskDiv.append(
       taskNameDiv,
       taskDescriptionDiv,
       taskDueDateDiv,
-      taskPriorityDiv
+      taskPriorityDiv,
+      deleteTaskButton
     );
 
     taskList.appendChild(taskDiv);
-  });
-
-  // clear inputs AFTER render
-
-}
-/* Rendering of task cards
-
-    const taskDiv = document.createElement("div");
-    taskDiv.id = "task";
-
-    const taskNameDiv = document.createElement("div");
-    taskNameDiv.innerText = taskName;
-
-    const taskDescriptionDiv = document.createElement("div");
-    taskDescriptionDiv.innerText = taskDescription;
-
-    const taskDueDateDiv = document.createElement("div");
-    taskDueDateDiv.innerText = `Due Date: ${taskDueDate}`;
-
-    const taskPriorityDiv = document.createElement("div");
-    taskPriorityDiv.innerText = `Priority: ${taskPriority}`;
-
-    taskDiv.appendChild(taskNameDiv);
-    taskDiv.appendChild(taskDescriptionDiv);
-    taskDiv.appendChild(taskDueDateDiv);
-    taskDiv.appendChild(taskPriorityDiv);
-
-    tasklist.appendChild(taskDiv);
-
-    taskNameInput.value = "";
-    taskDescriptionInput.value = "";
-    taskDueDateInput.value = "";
-    priorityOptions.forEach(option => option.checked = false);
-
-    */
-
+  })};
