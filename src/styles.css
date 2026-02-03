@@ -187,3 +187,13 @@ li:hover {
 #task:hover {
   transform: scale(1.02);
 }
+
+#deleteTaskButton {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  color: white;
+  background-color: rgba(188, 37, 37, 0.712);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
