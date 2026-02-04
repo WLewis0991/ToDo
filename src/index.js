@@ -38,6 +38,7 @@ addTaskButton.addEventListener("click", () => {
 })
 
 cancelTask.addEventListener("click", () => {
+    document.getElementById("addTaskForm").reset();
     addTaskModal.close();
 })
 
