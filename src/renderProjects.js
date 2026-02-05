@@ -14,6 +14,7 @@ function renderProjects() {
     projectItem.addEventListener("click", renderToDos);
 
     const deleteProjectButton = document.createElement("button");
+    deleteProjectButton.id = "deleteProject";
     deleteProjectButton.innerText = "X";
 
  deleteProjectButton.addEventListener("click", (e) => {

@@ -216,3 +216,17 @@ li:hover {
   font-family: "MyCustomFont", sans-serif;;
 
 }
+
+#deleteProject {
+  padding:0 10px;
+  border: none;
+  background-color: rgba(250, 235, 215, 0);
+  font-size: 1.3em;
+  color: red;
+  cursor: pointer;
+  transition: transform 1s ease;
+}
+
+#deleteProject:hover {
+  transform: rotate(180deg) scale(1.2);
+}
