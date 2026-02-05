@@ -6,18 +6,32 @@ function renderProjects() {
   const projectList = document.getElementById("projectList");
   projectList.innerHTML = "";
 
-  projects.forEach(project => {
+  projects.forEach(proj => {
     const projectItem = document.createElement("li");
-
-    projectItem.dataset.id = project.id; 
-    projectItem.innerText = project.name;
+    projectItem.dataset.id = proj.id;
+    projectItem.innerText = proj.name;
 
     projectItem.addEventListener("click", renderToDos);
+
+    const deleteProjectButton = document.createElement("button");
+    deleteProjectButton.innerText = "X";
+
+ deleteProjectButton.addEventListener("click", (e) => {
+  e.stopPropagation();
+
+  const index = projects.findIndex(p => p.id === proj.id);
+  if (index !== -1) {
+    projects.splice(index, 1);
+  }
+
+  localStorage.setItem("projects", JSON.stringify(projects));
+  renderProjects();
+});
+    projectItem.appendChild(deleteProjectButton);
     projectList.appendChild(projectItem);
-
-
   });
 }
+
 
 let currentProject = null;
 

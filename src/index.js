@@ -5,7 +5,6 @@ import { taskModal } from "./taskModal.js";
 import { projectModal } from "./projectModal.js";
 
 
-
 projectModal();
 taskModal();
 renderProjects();
