@@ -9,7 +9,7 @@ if (projects.length === 0) {
         tasks: [
             {
                 id: crypto.randomUUID(),
-                title: "Welcome to your To-Do App",
+                name: "Welcome to your To-Do App",
                 description: "This is a sample task",
                 dueDate: "",
                 priority: "Low",
@@ -17,7 +17,7 @@ if (projects.length === 0) {
             },
             {
                 id: crypto.randomUUID(),
-                title: "Add your first task",
+                name: "Add your first task",
                 description: "Click the Add Task button",
                 dueDate: "",
                 priority: "Medium",

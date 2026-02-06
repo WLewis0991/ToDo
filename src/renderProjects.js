@@ -94,7 +94,6 @@ function renderToDos(e) {
       deleteTaskButton,
       taskDescriptionDiv
     );
-
       taskDiv.addEventListener("click", () => {
       taskDiv.classList.toggle("expanded");
       taskDescriptionDiv.classList.toggle("hidden");
