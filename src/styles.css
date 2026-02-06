@@ -13,6 +13,7 @@
   margin: 0;
   box-sizing: border-box;
   color: rgb(34, 30, 30);
+  word-wrap: break-word;
 }
 
 body {
