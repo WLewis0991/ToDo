@@ -251,7 +251,8 @@ li:hover {
 .hidden {
   display: none;
 }
-.taskDescription {
+#taskDescription {
   grid-column: 1/ -1;
   height: auto;
+  word-wrap: break-word;
 }
