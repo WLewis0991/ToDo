@@ -14,6 +14,9 @@ function projectModal () {
     const addProject = document.getElementById("addProject");
     addProject.addEventListener("click", () => {
         let newProject = projectNameInput.value;
+        if (newProject === ""){
+            return;
+        }
         newProject = new AddNewProject(newProject)
         projectNameInput.value = "";
         renderProjects();
