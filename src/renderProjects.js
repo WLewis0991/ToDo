@@ -65,6 +65,7 @@ function renderToDos(e) {
 
     const taskDescriptionDiv = document.createElement("div");
     taskDescriptionDiv.id = "taskDescription";
+    taskDescriptionDiv.classList.add("hidden");
     taskDescriptionDiv.innerText = task.description;
 
     const taskDueDateDiv = document.createElement("div");
@@ -88,12 +89,18 @@ function renderToDos(e) {
 
     taskDiv.append(
       taskNameDiv,
-      taskDescriptionDiv,
       taskDueDateDiv,
       taskPriorityDiv,
-      deleteTaskButton
+      deleteTaskButton,
+      taskDescriptionDiv
     );
 
+      taskDiv.addEventListener("click", () => {
+      taskDiv.classList.toggle("expanded");
+      taskDescriptionDiv.classList.toggle("hidden");
+
+    })
+    
     taskList.appendChild(taskDiv);
   })};
 
