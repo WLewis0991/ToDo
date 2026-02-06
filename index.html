@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnIt</title>
+<script defer src="main.js"></script></head>
+<body>
+    <!--Sidebar for projects to be displayed and added-->
+    <div id="sideBar">
+        <header>
+            <img src="8737513f224ddc82d1dc.png" alt="OnItLogo" id="logo">
+        </header>
+        <div id="projectSection">
+            <div id="projectBanner">
+                <img src="3fad59135a672941966d.svg" id="projectsImg">
+                <h1>Projects</h1>
+            </div>
+            <ul id="projectList">
+                 <!-- Projects will be added here through JS-->
+            </ul>
+            <img src="ae08a55e24be6a396383.png" alt="AddProjectButton" id="addProjectButton">
+            
+        </div>
+    </div>
+    <!--Container where tasks will go-->
+    <div id="taskContainer">
+        <div id="taskHeader">
+            <h3 id="currentProjectTitle">Current Project:</h3>
+            <img src="90065de238a098eccf93.png" alt="AddTaskButton" id="addTaskButton">
+
+        </div>
+        <div id="taskList">
+            <!-- Tasks will be added here through JS -->
+             <h2 id="noTasksMessage">Select a project and lets get started!</h2>
+        </div>
+    </div>
+
+    <!--Dailog modal for adding a project-->
+    <dialog id="addProjectModal">
+        <form method="dialog" id="addProjectForm">
+            <h1>Add New Project</h1>
+            <input type="text" id="projectNameInput" name="projectNameInput" required placeholder="Project Name">
+            <div class="modalButtons">
+                <img src="223e78c0ea7492b82fc9.png" alt="Add Project" id="addProject" class="addButton">
+                <img src="a6a5f2bac6f71d54345a.png" alt="Cancel" id="cancelProject" class="cancelButton">
+            </div>
+        </form>
+    </dialog>
+    <!--Dialog modal for adding a task-->
+    <dialog id="addTaskModal">
+        <form method="dialog" id="addTaskForm">
+            <h1>Add New Task</h1>
+            <input type="text" id="taskNameInput" name="taskNameInput" required placeholder="Task Name"><br>
+            <textarea id="taskDescriptionInput" name="taskDescriptionInput" placeholder="Task Description"></textarea><br>
+            <input type="date" id="taskDueDateInput" name="taskDueDateInput" required><br>
+             <div id="priority-selection">
+                <h3>Select Priority:</h3>
+                <label><input type="radio" name="priority" value="High" /> High</label>
+                <label><input type="radio" name="priority" value="Moderate" /> Moderate</label>
+                <label><input type="radio" name="priority" value="Low" /> Low</label>
+            </div>          
+            <div class="modalButtons">
+                <img src="223e78c0ea7492b82fc9.png" alt="Add Task" id="addTask" class="addButton">
+                <img src="a6a5f2bac6f71d54345a.png" alt="Cancel" id="cancelTask" class="cancelButton">
+            </div>
+
+        </form>
+    </dialog>
+    
+</body>
+</html>
